@@ -43,7 +43,7 @@ user_list = [user1, user2, user3, user4]
 show_key = input('Введите ключ (name или account): ').lower()
 
 try:
-    for i in range(0, len(user_list)):
+    for i in range(len(user_list)):
         print(f'Значение ключа "{show_key}" для пользователя user{i+1}: {user_list[i][show_key]}')
 
 except: # KeyError
@@ -89,21 +89,21 @@ chosen_user -= 1 # приводим номер пользователя в со�
 print(f'Мы перемещаем: \n{user_list[chosen_user]}\nв конец\n')
 
 print(f'Список ДО изменения:')
-for i in range(0, len(user_list)):
+for i in range(len(user_list)):
     print(f'user{i+1}: {user_list[i]}')
 
 pop_user = user_list.pop(chosen_user)
 user_list.append(pop_user)
 
 print(f'\nСписок ПОСЛЕ изменения:')
-for i in range(0, len(user_list)):
+for i in range(len(user_list)):
     print(f'user{i+1}: {user_list[i]}')
 
 
 
 # Программа, п.4. В конце должно выводиться сообщение со средним возрастом всех юзеров.
 sum_age = 0
-for i in range(0, len(user_list)):
+for i in range(len(user_list)):
     sum_age = sum_age + int(user_list[i]['age'])
 
 average_age = sum_age / len(user_list)
